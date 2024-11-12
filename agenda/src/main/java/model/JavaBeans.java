@@ -20,6 +20,8 @@ public class JavaBeans {
 		this.aniversario = aniversario;
 	}
 
+//	public <JavaBeans> lista = new <javaBeans>();
+	
 	public String getId() {
 		return id;
 	}
@@ -44,10 +46,17 @@ public class JavaBeans {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getAniversario() {
+	public String getAniversario() {		
 		return aniversario;
 	}
 	public void setAniversario(String aniversario) {
-		this.aniversario = aniversario;
+
+		aniversario.replaceAll("/", "");
+		String day = aniversario.substring(0, 2);
+		String month = aniversario.substring(2, 4);
+		String year = aniversario.substring(4, 8);
+		String data = year + month + day;
+		
+		this.aniversario = data;
 	}
 }

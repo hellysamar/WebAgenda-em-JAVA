@@ -12,5 +12,12 @@ CREATE TABLE contatos (
 
 DESCRIBE contatos;
 
+-- RENOMEAR TABELA
 -- RENAME TABLE contato TO contatos; // havia criado a tabela por nome contato
 
+
+-- CRUD / CREATE - INSERT
+INSERT INTO contatos (nome, fone, email, aniversario) VALUES ('Hellen', '618545845', 'hellen@mail.com', 20241025);
+
+-- CRUD / READ - SELECT
+SELECT * FROM contatos ORDER BY nome;

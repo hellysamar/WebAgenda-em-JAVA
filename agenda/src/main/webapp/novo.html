@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Agenda Web - Novo contato</title>
+<link rel="icon" href="imagens/favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Novo Contato</h1>
+	
+	<form name="formContato" action="create">
+		<table>
+			<tr>
+				<td><input type="text" name="name" placeholder="Nome"></td>
+			</tr>
+			<tr>
+				<td><input type="text" name="fone" placeholder="Telefone"></td>
+			</tr>
+			<tr>
+				<td><input type="text" name="mail" placeholder="E-mail"></td>
+			</tr>
+			<tr>
+				<td><input type="text" name="birth" placeholder="Aniversário"></td>
+			</tr>
+		</table>
+		
+		<input type="button" value="Adicionar Contato" onclick="validar()">
+	</form>
+	
+	<script type="text/javascript" src="script/validador.js"></script>
+</body>
+</html>
