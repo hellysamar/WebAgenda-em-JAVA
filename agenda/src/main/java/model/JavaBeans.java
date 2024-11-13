@@ -50,13 +50,6 @@ public class JavaBeans {
 		return aniversario;
 	}
 	public void setAniversario(String aniversario) {
-
-		aniversario.replaceAll("/", "");
-		String day = aniversario.substring(0, 2);
-		String month = aniversario.substring(2, 4);
-		String year = aniversario.substring(4, 8);
-		String data = year + month + day;
-		
-		this.aniversario = data;
+		this.aniversario = aniversario;		
 	}
 }
