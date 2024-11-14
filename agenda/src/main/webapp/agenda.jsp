@@ -47,7 +47,8 @@
 		</tbody>
 	</table>
 	
-	<a href="novo.html">Novo contato</a>
+	<a href="novo.html">Novo Contato</a>
+	<a href="report">Gerar Relatório</a>
 	<script type="text/javascript" src="script/confirm.js"></script>
 </body>
 </html>

@@ -21,3 +21,12 @@ INSERT INTO contatos (nome, fone, email, aniversario) VALUES ('Hellen', '6185458
 
 -- CRUD / READ - SELECT
 SELECT * FROM contatos ORDER BY nome;
+
+-- SELECT CONTATO ESPECIFICO
+SELECT * FROM contatos WHERE id = ?;
+
+-- CRUD / UPDATE - UPDATE
+UPDATE contatos SET nome = 'Hellysmar', email = 'iceroot@mail.com' WHERE id = 2;
+
+-- CRUD / DELETE -
+DELETE FROM contatos WHERE id = 1;
