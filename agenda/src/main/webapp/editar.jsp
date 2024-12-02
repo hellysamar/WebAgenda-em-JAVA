@@ -3,40 +3,77 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Agenda Web - Editar contato</title>
+<title>Agenda Web - Editar Contato</title>
 <link rel="icon" href="imagens/favicon.png">
 <link rel="stylesheet" href="style.css">
-<style>
-	#desibled {
-		border: 1px solid red;
-	}
-</style>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.0/css/all.css">
 </head>
-<body>
-	<h1>Editar Contato</h1>
-	
-	<form name="formContato" action="update">
-		<table>
-			<tr>
-				<td><input type="text" name="id" id="desibled" readonly value="<%out.print(request.getAttribute("id"));%>"></td>
-			</tr>
-			<tr>
-				<td><input type="text" name="name" value="<%out.print(request.getAttribute("name"));%>"></td>
-			</tr>
-			<tr>
-				<td><input type="text" name="fone" value="<%out.print(request.getAttribute("fone"));%>"></td>
-			</tr>
-			<tr>
-				<td><input type="text" name="mail" value="<%out.print(request.getAttribute("mail"));%>"></td>
-			</tr>
-			<tr>
-				<td><input type="text" name="birth" value="<%out.print(request.getAttribute("birth"));%>"></td>
-			</tr>
-		</table>
-		
-		<input type="button" value="Salvar Contato" onclick="validar()">
-	</form>
-	
-	<script type="text/javascript" src="script/validador.js"></script>
-</body>
+      <body>
+            <header>
+                  <h1>AGENDA DE CONTATOS</h1>
+            </header>
+            <main>      
+                  <form name="formContato" action="update">
+                        <table>
+                              <thead>
+                                    <tr id="tr-head">
+                                          <th>
+                                                <i class="fa-solid fa-user"></i> 
+                                                Nome
+                                          </th>
+                                          <th>
+                                                <i class="fa-solid fa-phone"></i> 
+                                                Telefone
+                                          </th>
+                                          <th>
+                                                <i class="fa-solid fa-envelope"></i> 
+                                                E-mail
+                                          </th>
+                                          <th>
+                                                <i class="fa-solid fa-cake-candles"></i> 
+                                                Aniversário
+                                          </th>
+                                    </tr>
+                              </thead>
+                              
+                              <tbody>				
+                                    <tr>
+                                          <td><input type="text" name="name" value="<%out.print(request.getAttribute("name"));%>" id="ipt-nome"></td>
+                                          
+                                          <td><input type="text" name="fone" value="<%out.print(request.getAttribute("fone"));%>" id="ipt-fone"></td>
+                                          
+                                          <td><input type="text" name="mail" value="<%out.print(request.getAttribute("mail"));%>" id="ipt-mail"></td>
+                                          
+                                          <td><input type="text" name="birth" value="<%out.print(request.getAttribute("birth"));%>" id="ipt-date"></td>
+                                    </tr>
+                              </tbody>
+                        </table>
+                        
+                        <div class="flex-button">
+                              <div class="button btn-grn">
+                                    <i class="fa-solid fa-user-check"></i> 
+                                    <input type="button" value="Salvar Contato" onclick="validar()">
+                              </div>
+                              <div class="flex-button">
+                                    <span>
+                                          <i class="fa-solid fa-id-card-clip white"></i>
+                                          Contato cadastrado no ID 
+                                          <input type="text" name="id" id="desibled" class="ipt-id" readonly value="<%out.print(request.getAttribute("id"));%>">
+                                    </span>
+                              </div>
+                        </div>
+                  </form>     
+                  <div class="button">
+	               		<a class="btn-blue" onclick="voltar()">
+	            				<i class="fa-regular fa-square-caret-left"></i>
+	            				Voltar a agenda
+	               		</a>
+                  </div>            
+            </main>
+            <footer>
+            </footer>
+
+	      <script type="text/javascript" src="script/confirm.js"></script>
+	      <script type="text/javascript" src="script/validador.js"></script>
+      </body>
 </html>

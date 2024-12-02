@@ -1,5 +1,227 @@
-@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
-#cor {
-	color: red;
+body {
+  font-family: "Sour Gummy", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  height: 99vh;
+}
+
+header h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+a, .button input {
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.flex-button > span {
+  color: white;
+  font-size: 1.2rem;
+}
+
+a, .button input {
+  margin: 0 .3rem;
+}
+
+table {
+  background-color: rgb(191, 191, 191);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: .5rem;
+  border: 1.5px solid white;
+  border-style: inset;
+}
+
+#tr-head th {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  padding-bottom: 1rem;
+}
+
+h1 {
+  color: white;
+}
+
+.btn-grn, .btn-org, .btn-red, .btn-gry , .btn-blue{
+  padding: .5rem 1rem;
+  border-radius: .7rem;
+  transition: box-shadow 0.1s ease-in-out;
+}
+
+.btn-grn:hover, .btn-org:hover, .btn-red:hover, .btn-gry:hover, .btn-blue:hover {
+  /* transform: scale(1.5); */
+  /* transition: 0.3s; */
+  /* box-shadow: 1px 1px white; */
+  box-shadow: 0px 0px 3px 2px rgba(124, 124, 124, 0.8);
+}
+
+.btn-grn {
+  transition: 0.3s;
+  background-color: green;
+  border: 1px solid rgb(10, 85, 10);
+}
+
+.btn-gry {
+  transition: 0.3s;
+  background-color: rgb(191, 191, 191);
+  border: 1px solid rgb(54, 54, 54);
+}
+
+.btn-org {
+  transition: 0.3s;
+  background-color: orange;
+  border: 1px solid rgb(180, 130, 37);
+}
+
+.btn-red {
+  transition: 0.3s;
+  background-color: red;
+  border: 1px solid rgb(185, 34, 34);
+}
+
+.btn-blue {
+  transition: 0.3s;
+  background-color: blue;
+  border: 1px solid rgb(2, 2, 160);
+}
+
+.btn-grn:hover {
+  background-color: rgb(10, 85, 10);
+}
+
+.btn-gry:hover {
+  background-color: rgb(54, 54, 54);
+}
+
+.btn-org:hover {
+  background-color: rgb(180, 130, 37);
+}
+
+.btn-red:hover {
+  background-color: rgb(185, 34, 34);
+}
+
+.btn-blue:hover {
+  background-color: rgb(2, 2, 160);
+}
+
+.btn-grn:active {
+  background-color: green;
+  border: 1px solid green;
+}
+
+.btn-gry:active {
+  background-color: rgb(191, 191, 191);
+  border: 1px solid rgb(191, 191, 191);
+}
+
+.btn-org:active {
+  background-color: orange;
+  border: 1px solid orange;
+}
+
+.btn-red:active {
+  background-color: red;
+  border: 1px solid red;
+}
+
+.btn-blue:active {
+  background-color: blue;
+  border: 1px solid blue;
+}
+
+.flex-button > .fa-id-card-clip, .flex-button > .fa-users-viewfinder {
+  color: white;
+}
+
+span {
+	text-align: end;
+}
+
+span > input {
+	border: none;
+	background: none;
+	width: 10%;
+	color: white;
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+input {
+  font-family: "Sour Gummy", sans-serif;
+}
+
+.button > input {
+	cursor: pointer;
+}
+
+.button > i, .button > input {
+  color: white;
+  font-size: 1rem;
+  font-weight: bolder;
+  background: none;
+  border: none;
+}
+
+td:nth-child(6) {
+	padding: .7em 0;
+}
+
+td:nth-child(5) {
+	text-align: center;
+}
+
+td > input {
+  border-radius: .5rem;
+  border: 1.5px solid white;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+#ipt-nome {
+  max-width: 260px ;
+}
+
+#ipt-fone {
+  max-width: 140px ;
+  
+}
+
+#ipt-mail:valid {
+  max-width: 260px ;
+}
+
+#ipt-mail:invalid {
+  border-color: red;
+}
+
+#ipt-date {
+  max-width: 100px ;
+
+}
+
+#ipt-id {
+  max-width: 20px;
+  background: none;
+  color: white
 }

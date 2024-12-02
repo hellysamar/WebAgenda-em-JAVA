@@ -64,6 +64,11 @@ public class Controller extends HttpServlet {
 		// Encaminhar a lista do documento para o .Jsp
 		request.setAttribute("contatos", lista);
 		
+		// VERIFICA QUANTIDADE DE CONTATOS CADASTRADOS
+		String cadastros = dao.contatosCadastrados();
+		System.out.println("CONTROLLER depois de cadastros receber o método da DAO " + cadastros);
+		request.setAttribute("cadastros", cadastros);
+		
 		RequestDispatcher rd = request.getRequestDispatcher("agenda.jsp");
 		
 		rd.forward(request, response);
@@ -106,7 +111,6 @@ public class Controller extends HttpServlet {
 		RequestDispatcher rd = request.getRequestDispatcher("editar.jsp");
 		rd.forward(request, response);
 	}
-	
 	protected void editarContato(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		contato.setId(request.getParameter("id"));
@@ -180,4 +184,5 @@ public class Controller extends HttpServlet {
 			documento.close();
 		}
 	}
+	
 }

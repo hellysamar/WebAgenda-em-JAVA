@@ -195,4 +195,26 @@ public class DAO {
 			System.out.println(e);
 		}
 	}
+
+	public String contatosCadastrados() {
+		String sqlQtd = "SELECT COUNT(1) FROM contatos;";
+				
+		String cadastros = "";
+		try {
+			Connection conn = conectar();
+			PreparedStatement pst = conn.prepareStatement(sqlQtd);
+			ResultSet rs = pst.executeQuery();
+			System.out.println("DAO verifica o valor armazenado no ResultSet antes do if " + rs);
+			if (rs.next()) {
+				cadastros = rs.getString(1);				
+			}
+			
+			conn.close();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		return cadastros;
+	}
 }
+
