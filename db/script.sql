@@ -30,3 +30,6 @@ UPDATE contatos SET nome = 'Hellysmar', email = 'iceroot@mail.com' WHERE id = 2;
 
 -- CRUD / DELETE -
 DELETE FROM contatos WHERE id = 1;
+
+-- VERIFICANDO QUANTOS CONTATOS FORAM CADASTRADOS -
+SELECT COUNT(1) FROM contatos;

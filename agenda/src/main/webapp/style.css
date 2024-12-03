@@ -31,15 +31,12 @@ a, .button input {
   color: white;
   text-decoration: none;
   font-weight: bolder;
+  margin: 0 .3rem;
 }
 
 .flex-button > span {
   color: white;
   font-size: 1.2rem;
-}
-
-a, .button input {
-  margin: 0 .3rem;
 }
 
 table {
@@ -170,7 +167,7 @@ input {
   font-family: "Sour Gummy", sans-serif;
 }
 
-.button > input {
+.button, .button > input {
 	cursor: pointer;
 }
 

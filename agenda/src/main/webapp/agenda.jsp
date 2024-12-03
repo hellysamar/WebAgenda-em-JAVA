@@ -4,7 +4,8 @@
 <%@ page import="java.util.ArrayList"%>
 
 <%
-ArrayList<JavaBeans> lista = (ArrayList<JavaBeans>) request.getAttribute("contatos");
+	@ SuppressWarnings ("unchecked")
+	ArrayList<JavaBeans> lista = (ArrayList<JavaBeans>) request.getAttribute("contatos");
 %>
 
 <!DOCTYPE html>
@@ -33,13 +34,11 @@ ArrayList<JavaBeans> lista = (ArrayList<JavaBeans>) request.getAttribute("contat
                         </a>
                   </div>
                   
-                        <span>
-                    			<i class="fa-solid fa-id-card-clip white"></i>
-                    			<input type="text" name="id" id="desibled" class="ipt-id" readonly value="<%out.print(request.getAttribute("cadastros"));%>">
-                              	contatos cadastrado no ID 
-                              	
-                        </span>
-                  
+                  <span>
+              			<i class="fa-solid fa-id-card-clip white"></i>
+              			<input type="text" name="id" id="desibled" class="ipt-id" readonly value="<%out.print(request.getAttribute("cadastros"));%>">
+                        	contatos cadastrados                              	
+                  </span>                  
             </div>
             
             <table>

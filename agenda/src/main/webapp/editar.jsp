@@ -19,11 +19,11 @@
                                     <tr id="tr-head">
                                           <th>
                                                 <i class="fa-solid fa-user"></i> 
-                                                Nome
+                                                Nome *
                                           </th>
                                           <th>
                                                 <i class="fa-solid fa-phone"></i> 
-                                                Telefone
+                                                Telefone *
                                           </th>
                                           <th>
                                                 <i class="fa-solid fa-envelope"></i> 
@@ -38,13 +38,13 @@
                               
                               <tbody>				
                                     <tr>
-                                          <td><input type="text" name="name" value="<%out.print(request.getAttribute("name"));%>" id="ipt-nome"></td>
+                                        <td><input type="text" name="name" placeholder="Nome e sobre nome" value="<%out.print(request.getAttribute("name"));%>" id="ipt-nome"></td>
+                                        
+                                        <td><input type="tel" name="fone" pattern="[0-9]+$" maxlength="15" placeholder="(99) 99999-9999" value="<%out.print(request.getAttribute("fone"));%>" id="ipt-fone"></td>
                                           
-                                          <td><input type="text" name="fone" value="<%out.print(request.getAttribute("fone"));%>" id="ipt-fone"></td>
+                                        <td><input type="email" name="mail" placeholder="text@mail.com" value="<%out.print(request.getAttribute("mail"));%>" id="ipt-mail"></td>
                                           
-                                          <td><input type="text" name="mail" value="<%out.print(request.getAttribute("mail"));%>" id="ipt-mail"></td>
-                                          
-                                          <td><input type="text" name="birth" value="<%out.print(request.getAttribute("birth"));%>" id="ipt-date"></td>
+                                        <td><input type="text" name="birth" maxlength="10" placeholder="DD/MM/AAAA" value="<%out.print(request.getAttribute("birth"));%>" id="ipt-date" onchange=^validarData(this)></td>
                                     </tr>
                               </tbody>
                         </table>
